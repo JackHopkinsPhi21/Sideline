@@ -1,0 +1,70 @@
+.hidden { display: none !important; }
+.glass-card { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(20px); }
+.tab-btn { font-size: 10px; font-weight: 900; text-transform: uppercase; color: #475569; padding-bottom: 4px; border-bottom: 2px solid transparent; transition: 0.3s; }
+.tab-btn.active { color: #22c55e; border-color: #22c55e; }
+
+/* ADMIN GLOWS */
+.founder-glow { 
+    box-shadow: 0 0 20px rgba(234, 179, 8, 0.4);
+    border: 1px solid #eab308 !important;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+    color: #000 !important;
+}
+.founder-text { color: #eab308 !important; font-weight: 900; }
+
+/* VOICE PULSE */
+.voice-pulse { animation: v-pulse 2s infinite; border: 2px solid #22c55e; }
+@keyframes v-pulse {
+    0% { box-shadow: 0 0 0 0px rgba(34, 197, 94, 0.4); }
+    70% { box-shadow: 0 0 0 30px rgba(34, 197, 94, 0); }
+    100% { box-shadow: 0 0 0 0px rgba(34, 197, 94, 0); }
+}
+
+/* SIDEBAR DROPDOWNS */
+.category-header { cursor: pointer; user-select: none; }
+.category-header i { transition: transform 0.3s; }
+.category-collapsed i { transform: rotate(-90deg); }
+#trash-zone.active { border-color: #ef4444; color: #ef4444; background: rgba(239, 68, 68, 0.1); }
+
+#admin-gate:not(.hidden) {
+    display: block !important;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.voice-btn-active { 
+    background-color: #ef4444 !important; /* Red */
+    color: white !important;
+}
+
+.voice-pulse.muted {
+    animation: none;
+    border-color: #475569;
+    opacity: 0.5;
+}
+
+.voice-pulse.muted i {
+    color: #ef4444;
+}
+
+/* Architect Theme (High Contrast) */
+body.theme-architect {
+    --bg-main: #020617;
+    --accent-color: #22c55e; /* Bright Green */
+}
+
+body.theme-architect .sidebar {
+    border-right: 1px solid var(--accent-color);
+}
+
+/* Classic Theme (Subtle) */
+body.theme-classic {
+    --bg-main: #000000;
+    --accent-color: #475569; /* Slate Gray */
+}
